@@ -12,21 +12,22 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-
-    final title = (
-        Column(
-          children: const [
-            SizedBox(
-              width: double.infinity,
-              height: 10,
-            ),
-            Text(
-              'Login',
-              style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold,),
-              
-            ),
-          ],
-        ));
+    final title = (Column(
+      children: const [
+        SizedBox(
+          width: double.infinity,
+          height: 10,
+        ),
+        Text(
+          'Login',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 35,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ));
 
     /*final logo = Hero(
       tag: 'hero',
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
     final username = TextFormField(
       // keyboardType: TextInputType.emailAddress,
       autofocus: false,
-      initialValue: 'Username',
+      initialValue: '',
       decoration: InputDecoration(
         hintText: 'Username',
         contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -52,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
 
     final password = TextFormField(
       autofocus: false,
-      initialValue: 'insira sua senha',
+      initialValue: '',
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',

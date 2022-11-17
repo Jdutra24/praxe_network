@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
+import 'main_page.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final routes = <String, WidgetBuilder>{
+    MainPage.tag: (context) => const MainPage(),
     LoginPage.tag: (context) => const LoginPage(),
   };
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const MainPage(),
       routes: routes,
     );
   }
